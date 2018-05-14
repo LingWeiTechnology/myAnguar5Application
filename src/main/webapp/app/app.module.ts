@@ -27,6 +27,8 @@ import {
     ErrorComponent
 } from './layouts';
 
+import {HandinhandModule} from './handinhand/handinhand.module'
+
 @NgModule({
     imports: [
         BrowserModule,
@@ -38,6 +40,8 @@ import {
         MyAnguar5ApplicationAccountModule,
         MyAnguar5ApplicationEntityModule,
         // jhipster-needle-angular-add-module JHipster will add new module here
+
+        HandinhandModule,
     ],
     declarations: [
         JhiMainComponent,
