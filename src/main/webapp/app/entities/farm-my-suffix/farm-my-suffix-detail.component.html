@@ -1,0 +1,74 @@
+
+<div *ngIf="farm">
+    <h2><span>Farm</span> {{farm.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span>Company Name</span></dt>
+        <dd>
+            <span>{{farm.companyName}}</span>
+        </dd>
+        <dt><span>Company Location</span></dt>
+        <dd>
+            <span>{{farm.companyLocation}}</span>
+        </dd>
+        <dt><span>Company Legal Person</span></dt>
+        <dd>
+            <span>{{farm.companyLegalPerson}}</span>
+        </dd>
+        <dt><span>Registered Capital</span></dt>
+        <dd>
+            <span>{{farm.registeredCapital}}</span>
+        </dd>
+        <dt><span>Email</span></dt>
+        <dd>
+            <span>{{farm.email}}</span>
+        </dd>
+        <dt><span>Phone Number</span></dt>
+        <dd>
+            <span>{{farm.phoneNumber}}</span>
+        </dd>
+        <dt><span>Create Date</span></dt>
+        <dd>
+            <span>{{farm.createDate | date:'medium'}}</span>
+        </dd>
+        <dt><span>Address</span></dt>
+        <dd>
+            <span>{{farm.address}}</span>
+        </dd>
+        <dt><span>Web Address</span></dt>
+        <dd>
+            <span>{{farm.webAddress}}</span>
+        </dd>
+        <dt><span>Scope</span></dt>
+        <dd>
+            <span>{{farm.scope}}</span>
+        </dd>
+        <dt><span>Longitude</span></dt>
+        <dd>
+            <span>{{farm.longitude}}</span>
+        </dd>
+        <dt><span>Latitude</span></dt>
+        <dd>
+            <span>{{farm.latitude}}</span>
+        </dd>
+        <dt><span>Province</span></dt>
+        <dd>
+            <span>{{farm.province}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'farm-my-suffix/'+ farm.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span> Edit</span>
+    </button>
+</div>
